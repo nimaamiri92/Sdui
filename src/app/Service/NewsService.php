@@ -8,6 +8,11 @@ use Illuminate\Contracts\Auth\Authenticatable;
 
 class NewsService
 {
+    /**
+     * @var Authenticatable
+     */
+    private $user;
+
     public function __construct(Authenticatable $user)
     {
         $this->user = $user;
